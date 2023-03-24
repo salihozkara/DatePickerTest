@@ -13,13 +13,15 @@
 @section scripts {
     <abp-script src="/Pages/Index.js"/>
     <script>
-        // var newPicker = abp.libs.bootstrapDateRangePicker.createDateRangePicker({
-        // label: 'New Date Range Picker',
-        // });
-        // newPicker.on('apply.daterangepicker', function (ev, picker) {
-        // console.log(newPicker[0].datePicker)
-        // });
-        // newPicker.insertAfter($('#aaa'));
+        var newPicker = abp.libs.bootstrapDateRangePicker.createDateRangePicker(
+            {
+                label: "New Picker",
+                startDate: "2020-01-01",
+                endDate: "2020-01-02",
+            
+            });
+        debugger;
+        newPicker.insertAfter($('body'));
     </script>
 }
 
@@ -45,7 +47,10 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    <abp-dynamic-form abp-model="DynamicFormExample"></abp-dynamic-form>
+    <abp-dynamic-form abp-model="DynamicFormExample">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </abp-dynamic-form>
+    
 
 
 </div>
